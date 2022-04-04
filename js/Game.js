@@ -61,13 +61,13 @@ class Game {
       text("Player 2 :" + allPlayers.player2.score, 50, 100);
     }
 
-    // check if player.score is greater than or equal to 5
     if (player.score >= 5) {
-        player.rank += 1;
-        Player.updatePlayerAtEnd(player.rank);
-        player.update();
-        this.showRank();
-        gameState = 2;
+      player.rank += 1;
+      Player.updatePlayerAtEnd(player.rank);
+
+      player.update();
+      this.showRank();
+      gameState = 2;
     }
 
     if (keyIsDown(RIGHT_ARROW) && player.index !== null) {
